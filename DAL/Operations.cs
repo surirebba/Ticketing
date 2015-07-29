@@ -31,7 +31,7 @@ namespace DAL
                 {
                     AvailSeat = SeatCapacity - Convert.ToInt32(reader["Count"]);
                 }
-                Conn.Close();                
+                Conn.Close();
             }
             catch (Exception ex)
             {

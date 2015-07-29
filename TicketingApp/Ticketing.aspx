@@ -8,7 +8,7 @@
 </head>
 <body>
     <form id="frmTicketing" runat="server">
-        <table border="1" id="tblTicket">
+        <table border="0" id="tblTicket">
             <tr>
                 <td>Select Source:</td>
                 <td>
@@ -40,7 +40,7 @@
             </tr>
             <tr>
                 <td colspan="2" style="align-content: center">
-                    <asp:Label runat="server" ID="lblAvailableSets" Text="Available Seats: " Visible="false"></asp:Label>
+                    <asp:Label runat="server" ID="lblAvailableSets" Text="" Visible="false"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -58,10 +58,17 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:Button runat="server" ID="btnBook" Text="Book Tickets" />
+                    <asp:Button runat="server" ID="btnBook" Text="Book Tickets" OnClientClick="javascript:BookingSite();" />
                 </td>
-            </tr>
+            </tr>            
         </table>
     </form>
 </body>
+    
 </html>
+<script type="text/javascript">
+    function BookingSite()
+    {
+        window.open("https://redbus.in");
+    }
+</script>

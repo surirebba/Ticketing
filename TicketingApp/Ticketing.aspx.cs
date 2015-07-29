@@ -14,15 +14,15 @@ namespace TicketingApp
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            
         }
 
         protected void btnCheckAvailability_Click(object sender, EventArgs e)
         {
             string Source = ddlSource.SelectedValue;
             string Destination = ddlDestination.SelectedValue;
-            DAL.Operations o = new DAL.Operations();            
+            DAL.Operations o = new DAL.Operations();
             lblAvailableSets.Visible = true;
+            lblAvailableSets.Text = "Available Seats: ";
             lblAvailableSets.Text = lblAvailableSets.Text + Convert.ToString(o.CheckAvailability()) + "/45";
         }
     }
