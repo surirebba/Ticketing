@@ -1,3 +1,0 @@
-# Ticketing
-HackatonTicketing
-Tool
